@@ -1,0 +1,10 @@
+[Unit]
+Description=Baidu Netdisk daily sign-in
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/bdnet-daily-signin
+ExecStart=%h/bdnet-daily-signin/.venv/bin/python -u %h/bdnet-daily-signin/du.py --json
+TimeoutStartSec=180
+StandardOutput=journal
+StandardError=journal

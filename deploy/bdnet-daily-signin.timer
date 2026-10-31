@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Baidu Netdisk sign-in daily at 09:15 Shanghai time
+
+[Timer]
+OnCalendar=*-*-* 09:15:00 Asia/Shanghai
+Persistent=true
+Unit=bdnet-daily-signin.service
+
+[Install]
+WantedBy=timers.target
